@@ -3,7 +3,7 @@
 
     class GetEstados {
         public static function execute() {
-            $pdo = Database::getInstance();
+            $pdo = Database::getReadInstance();
             $stmt = $pdo->query("SELECT * FROM estados");
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }

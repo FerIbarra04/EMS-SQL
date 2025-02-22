@@ -3,7 +3,7 @@
 
     class GetEstado {
         public static function execute($id) {
-            $pdo = Database::getInstance();
+            $pdo = Database::getReadInstance();
             $stmt = $pdo->prepare("SELECT * FROM estados WHERE id = :id");
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();

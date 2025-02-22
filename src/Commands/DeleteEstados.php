@@ -3,7 +3,7 @@
 
     class DeleteEstado {
         public static function execute($id) {
-            $pdo = Database::getInstance();
+            $pdo = Database::getWriteInstance();
             $stmt = $pdo->prepare("DELETE FROM estados WHERE id = ?") 
             ->execute([$id]);
             return "success";

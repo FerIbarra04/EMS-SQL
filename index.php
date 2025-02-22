@@ -39,6 +39,6 @@
     } else {
 
         http_response_code(405);
-        echo json_encode(['error' => 'Método no permitido']);
+        echo json_encode(['error' => 'No es una operacion CRUD permitida']);
     }
 ?>

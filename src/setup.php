@@ -1,7 +1,8 @@
 <?php
     require 'db.php';
 
-    $pdo = Database::getInstance();
+    // Obtener conexión de escritura
+    $pdo = Database::getWriteInstance();
 
     $pdo->exec("CREATE TABLE IF NOT EXISTS estados (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
